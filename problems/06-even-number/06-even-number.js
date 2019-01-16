@@ -5,7 +5,7 @@ Do not use % operator. */
 function isEven(someNum) {
   if( (someNum/2) * 2 == someNum) {
     return true
-} else {
+  } else {
     return false
-} 
+  } 
 }
