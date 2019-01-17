@@ -20,6 +20,41 @@ Example for printShape("Diamond", 5, "*");
  ***
   * 
 */
-function printShape(shape, height, character) {
-  
+function printShape(shape, height, character){
+  switch(shape) {
+    case "Square":
+      break;
+    case "Triangle":
+      break;
+    case "Diamond":  count = height - 1;
+      for (k = 1; k <= height; k++){
+        line = "";
+        for (i = 1; i <= count; i++){
+          line = line.concat(' ');
+        }
+        count--;
+        for (i = 1; i <= 2 * k - 1; i++){
+          line = line.concat(character);
+        }
+        console.log(line);
+      }
+      count = 1;
+      for (k = 1; k <= height - 1; k++){
+        let line = "";
+        for (i = 1; i <= count; i++){
+          line = line.concat(' ');
+        }
+        count++;
+        for (i = 1 ; i <= 2 *(height - k)-  1; i++){
+          line = line.concat(character);
+        }
+        console.log(line);
+      }
+    break;
+    default:
+      console.log('Is not a Shape!');
+      break;
+  }
 }
+
+printShape("Diamond", 5, "#");
