@@ -22,9 +22,29 @@ Example for printShape("Diamond", 5, "*");
 */
 function printShape(shape, height, character){
   switch(shape) {
-    case "Square":
+    case "Square": 
+      for (i=1; i<=height; i++) 
+      { 
+      let line = "";
+          // Print stars after spaces 
+          for (j=1; j<=height; j++){ 
+              line = line.concat(character); 
+          }  
+          console.log(line);
+      } 
+
       break;
     case "Triangle":
+      for(i = 1; i <= height; ++i)
+    {
+      let line = "";
+        for(j = 1; j <= i; ++j){
+            line = line.concat(character);
+        }
+        console.log(line);
+    }
+
+
       break;
     case "Diamond":  count = height - 1;
       for (k = 1; k <= height; k++){
@@ -57,4 +77,4 @@ function printShape(shape, height, character){
   }
 }
 
-printShape("Diamond", 5, "#");
+printShape("Triangle", 5, "#");
