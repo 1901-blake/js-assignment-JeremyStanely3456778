@@ -4,7 +4,7 @@ Use the bubble sort algorithm to sort the array.
 Return the sorted array. */
 
 function swap(numArray, i, j) {
-  var temp = numArray[i];
+  let temp = numArray[i];
   numArray[i] = numArray[j];
   numArray[j] = temp;
 }
